@@ -78,7 +78,14 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     :return: Une nouvelle grille avec une tuile ajoutée.
     :rtype: List[List[int]]
     """
-    raise NotImplementedError("Fonction _ajouter_tuile non implémentée.")
+    cv = get_case_vide(plateau):
+    [(0,0), (2,1), (2,2)]
+
+    pos = randint(0,len(vc)1)
+    coord = cv[pos]
+    ligne = coord[0]
+    colonne = coord[1]
+    plateau[ligne][colonne]
 
 def _supprimer_zeros(ligne: List[int]) -> List[int]:
     """
