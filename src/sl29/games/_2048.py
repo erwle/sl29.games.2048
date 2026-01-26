@@ -81,7 +81,7 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     cv = get_case_vide(plateau):
     [(0,0), (2,1), (2,2)]
 
-    pos = randint(0,len(vc)1)
+    pos = random.randint(0,len(vc)1)
     coord = cv[pos]
     ligne = coord[0]
     colonne = coord[1]
