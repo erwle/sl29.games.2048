@@ -18,7 +18,12 @@ def nouvelle_partie() -> Tuple[List[List[int]], int]:
     :return: Une grille TAILLExTAILLE initialisée avec deux tuiles, ainsi que le score à 0.
     :rtype: Tuple[List[List[int]], int]
     """
-    raise NotImplementedError("Fonction nouvelle_partie non implémentée.")
+
+    grille = _creer_plateau_vide()
+    _ajouter_tuile(grille)
+    grille2 = _ajouter_tuile(grille) 
+    grille3 = _ajouter_tuile(grille2)
+    return(grille3,0)
 
 def jouer_coup(plateau: List[List[int]], direction: str) -> tuple[List[List[int]], int, bool]:
     """
@@ -98,6 +103,8 @@ def _supprimer_zeros(ligne: List[int]) -> List[int]:
     :return: La ligne sans zéros.
     :rtype: List[int]
     """
+    
+
     raise NotImplementedError("Fonction _supprimer_zeros non implémentée.")
 
 def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
