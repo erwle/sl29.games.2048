@@ -121,6 +121,21 @@ def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
     :return: La ligne après fusion, les points gagnés
     :rtype: Tuple[List[int], int]
     """
+    fusion <- liste vide
+    i <- 0 
+    points <- 0
+    Tant que i est strictement inférieur à la longeur de ligne
+        # Pour fusionner il ne faut pas se trouver à la derniere case ET que cette case soit égale à la suivante
+        Si l'index suivant (i+1) existe et que la case courante est égale à la case suivante alors
+            points <- points + ligne[i] + ligne[i+1] # Il peut y avoir plus d'une fusion par ligne d'où le +=
+            fusion[i] <- ligne[i] + ligne[i+1]
+            i <- i + 2 # on saute deux cases
+        else: 
+            Ajouter(fusion, ligne[i])
+            i <- i +1 # on saute une case
+
+    return(fusion, points)
+
     raise NotImplementedError("Fonction _fusionner non implémentée.")
 
 def _completer_zeros(ligne): # ajouter les annotations de type
