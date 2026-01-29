@@ -2,6 +2,7 @@
 
 import random
 from typing import List, Tuple
+import copy 
 
 TAILLE:int = 4
 
@@ -78,14 +79,15 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     :return: Une nouvelle grille avec une tuile ajoutée.
     :rtype: List[List[int]]
     """
-    cv = get_case_vide(plateau):
-    [(0,0), (2,1), (2,2)]
+    plateau = copy.deepcopy(plateau)
+    cv = _get_cases_vides(plateau)
 
-    pos = random.randint(0,len(vc)1)
+    pos = random.randint(0,len(cv)-1)
     coord = cv[pos]
     ligne = coord[0]
     colonne = coord[1]
-    plateau[ligne][colonne]
+    plateau[ligne][colonne] = 2
+    return plateau
 
 def _supprimer_zeros(ligne: List[int]) -> List[int]:
     """
