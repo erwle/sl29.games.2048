@@ -103,7 +103,12 @@ def _supprimer_zeros(ligne: List[int]) -> List[int]:
     :return: La ligne sans zéros.
     :rtype: List[int]
     """
-    
+    result = []
+
+    for element in ligne:
+        if element !=0:
+            result.append(element)
+    return result
 
     raise NotImplementedError("Fonction _supprimer_zeros non implémentée.")
 

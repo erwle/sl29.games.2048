@@ -73,9 +73,28 @@ def test__ajouter_tuile():
     assert plateau_non_vide != nouveau_plateau2, "Le plateau original ne doit pas être modifié"
     print("OK")
 
-def test__supprimer_zeros():
+def test__supprimer_zeros(): 
+    liste = [1,0,0]
+    resultat = _supprimer_zeros(liste)
+    expected = [1]
+    assert resultat == expected, f"Attendu : {expected} mais result = {resultat}"
+    liste = []
+    resultat = _supprimer_zeros(liste)
+    expected = []
+    assert resultat == expected, f"Attendu : {expected} mais result = {resultat}"
+    liste = [0,0,0]
+    resultat = _supprimer_zeros(liste)
+    expected = []
+    assert resultat == expected, f"Attendu : {expected} mais result = {resultat}"
+    liste = [1,1,1]
+    resultat = _supprimer_zeros(liste)
+    expected = [1,1,1]
+    assert resultat == expected, f"Attendu : {expected} mais result = {resultat}"
+    liste = [0,0,1]
+    resultat = _supprimer_zeros(liste)
+    expected = [1]
+    assert resultat == expected, f"Attendu : {expected} mais result = {resultat}"
     print("----> Tests de _supprimer_zeros...")
-    raise NotImplementedError("Tests de _supprimer_zeros non implémentés.")
     print("OK")
 
 def test__fusionner():
