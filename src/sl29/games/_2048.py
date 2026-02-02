@@ -121,20 +121,21 @@ def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
     :return: La ligne après fusion, les points gagnés
     :rtype: Tuple[List[int], int]
     """
-    fusion <- liste vide
-    i <- 0 
-    points <- 0
-    Tant que i est strictement inférieur à la longeur de ligne
-        # Pour fusionner il ne faut pas se trouver à la derniere case ET que cette case soit égale à la suivante
-        Si l'index suivant (i+1) existe et que la case courante est égale à la case suivante alors
-            points <- points + ligne[i] + ligne[i+1] # Il peut y avoir plus d'une fusion par ligne d'où le +=
-            fusion[i] <- ligne[i] + ligne[i+1]
-            i <- i + 2 # on saute deux cases
-        else: 
-            Ajouter(fusion, ligne[i])
-            i <- i +1 # on saute une case
+    
+    fusion = []
+    i = 0 
+    points = 0
+    while i < len(ligne):
+        if (i+1 < len(ligne) and ligne[i] == ligne[i+1]) :
+            points_gagnes = ligne[i] + ligne[i+1]
+            points = points + points_gagnes 
+            fusion.append(points_gagnes)
+            i = i + 2 
+        else:
+            fusion.append(ligne[i])
+            i = i +1
 
-    return(fusion, points)
+    return fusion, points
 
     raise NotImplementedError("Fonction _fusionner non implémentée.")
 
