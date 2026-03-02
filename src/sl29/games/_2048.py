@@ -146,15 +146,15 @@ def _completer_zeros(ligne): # ajouter les annotations de type
 
     raise NotImplementedError("Fonction _completer_zeros non implémentée.")
 
-def _deplacer_gauche(plateau): # ajouter les annotations de type
-    nouveau_plateau = []
-    nouveaux_points = 0
-    pour chaque ligne du plateau:
-        ligne_sans_zeros = _supprimer_zeros(plateau)
-        ligne_fusionnee, points = _fusionner_ligne(ligne_sans_zeros)
-        nouveaux_points = nouveaux_points + points
-        ligne_finale = _completer_zeros(ligne_fusionnee)
-        append(nouveau_plateau, ligne_finale)
+# def _deplacer_gauche(plateau): # ajouter les annotations de type
+#     nouveau_plateau = []
+#     nouveaux_points = 0
+#     pour chaque ligne du plateau:
+#         ligne_sans_zeros = _supprimer_zeros(plateau)
+#         ligne_fusionnee, points = _fusionner_ligne(ligne_sans_zeros)
+#         nouveaux_points = nouveaux_points + points
+#         ligne_finale = _completer_zeros(ligne_fusionnee)
+#         append(nouveau_plateau, ligne_finale)
 
     return  nouveau_plateau, nouveaux_points
     raise NotImplementedError("Fonction _deplacer_gauche non implémentée.")
